@@ -1,6 +1,8 @@
 #ifndef CLRSTR_H
 #define CLRSTR_H
 
+#include <stdio.h>
+
 #ifndef GCCINCLPATH
     #error "GCCINCLPATH must be defined to the path of clrtxt.c"
 #else
