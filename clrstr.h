@@ -63,7 +63,7 @@ clrstr_print(clr_txt_t clrtxtos, size_t count);
 #define SETCMDCLR(clr) SetConsoleTextAttribute(\
     GetStdHandle(STD_OUTPUT_HANDLE),\
     clr\
-);
+)
 
 #ifdef __cplusplus
 }
