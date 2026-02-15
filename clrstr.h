@@ -60,6 +60,11 @@ clrstr_print(clr_txt_t clrtxtos, size_t count);
 #define DEFAULT_CLRTXT (clr_txt_t){WHITE, ""};
 #define MAKE_CLRTXT(clr, txt) (clr_txt_t){(clr), (txt)}
 
+#define SETCMDCLR(clr) SetConsoleTextAttribute(\
+    GetStdHandle(STD_OUTPUT_HANDLE),\
+    clr\
+);
+
 #ifdef __cplusplus
 }
 #endif
