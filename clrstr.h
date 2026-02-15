@@ -54,7 +54,7 @@ clrstr_print_single(clr_txt_t clrtxto);
  * @param count     total count of objects in array
  */
 void __cdecl
-clrstr_print(clr_txt_t clrtxtos, size_t count);
+clrstr_print(clr_txt_t* clrtxtos, size_t count);
 
 
 #define DEFAULT_CLRTXT (clr_txt_t){WHITE, ""};
