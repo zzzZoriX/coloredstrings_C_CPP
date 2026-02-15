@@ -1,6 +1,8 @@
 #ifndef CLRSTR_H
 #define CLRSTR_H
 
+#define CLRSTR_SRC clrstr.c
+
 #ifdef __cplusplus
 extern "C" {
 #endif
