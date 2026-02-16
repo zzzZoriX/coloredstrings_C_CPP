@@ -9,7 +9,7 @@ clrstr_print_single(clr_txt_t clrtxto) {
 
     if (clrtxto.clr == RAINBOW) {
 #ifdef CLRTXTRNBWIMPL
-        clrstr_print_rainbow(clrstr_print_rainbow(clrtxto.txt));
+        clrstr_print_rainbow(clrtxtos[iterator].txt);
 #else
         #warning "Define the CLRTXTRNBWIMPL macro"
 #endif
@@ -26,7 +26,7 @@ clrstr_print(clr_txt_t* clrtxtos, size_t count) {
     for (size_t iterator = 0; iterator != count; ++iterator) {
         if (clrtxtos[iterator].clr == RAINBOW) {
 #ifdef CLRTXTRNBWIMPL
-            clrstr_print_rainbow(clrstr_print_rainbow(clrtxtos[iterator].txt));
+            clrstr_print_rainbow(clrtxtos[iterator].txt);
 #else
             #warning "Define the CLRTXTRNBWIMPL macro"
 #endif
