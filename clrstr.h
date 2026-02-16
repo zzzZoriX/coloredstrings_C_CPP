@@ -65,9 +65,10 @@ clrstr_print(clr_txt_t* clrtxtos, size_t count);
     clr\
 )
 
+#endif // defined(__linux__)
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif // defined(__linux__)
 #endif //CLRSTR_H
