@@ -95,6 +95,33 @@ clrstr_print_rainbow(const char* text);
     }
 #endif // CLRTXTIMPL
 
+/*
+ * why is it moved to single if?
+ *      it gives to user opportunity to do own implementation
+ *      of print_rainbow function
+ */
+#ifdef CLRTXTRNBWIMPL
+    void __cdecl
+    clrstr_print_rainbow(const char* text) {
+        const color rainbow_color_sequence[] = {
+            RED, ORANGE, YELLOW, GREEN, WHEEL, BLUE, PURPLE
+        };
+        size_t  text_iterator = 0,
+                text_length = strlen(text);
+        unsigned char color_iterator = 0;
+
+        while (text_iterator != text_length) {
+            if (color_iterator == 7 /* colors array length */)
+                color_iterator = 0;
+
+            SETCMDCLR(rainbow_color_sequence[color_iterator++]);
+            printf("%c", text[text_iterator++]);
+        }
+
+        SETCMDCLR(WHITE);
+    }
+#endif // CLRTXTRNBWIMPL
+
 #endif // defined(__linux__)
 
 #ifdef __cplusplus
