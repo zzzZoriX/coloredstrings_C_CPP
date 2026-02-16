@@ -3,12 +3,6 @@
 
 #include <stdio.h>
 
-// #ifndef GCCINCLPATH
-//     #error "GCCINCLPATH must be defined to the path of clrtxt.c"
-// #else
-//     #define CLRTXTC     GCCINCLPATH##/coloredstrings/clrstr.c
-// #endif // GCCINCLPATH
-
 #ifdef __cplusplus
 extern "C" {
 #endif
