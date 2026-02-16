@@ -93,6 +93,8 @@ clrstr_print_rainbow(const char* text);
             clrstr_print_single(clrtxtos[iterator]);
         }
     }
+#else
+    #warning "You need to include .c file of clrstr lib for implemetations of API functions"
 #endif // CLRTXTIMPL
 
 /*
@@ -120,6 +122,8 @@ clrstr_print_rainbow(const char* text);
 
         SETCMDCLR(WHITE);
     }
+#else
+    #warning "Then you need to do your own implementation of clrtxt_print_rainbow function if you will use it"
 #endif // CLRTXTRNBWIMPL
 
 #endif // defined(__linux__)
