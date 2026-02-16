@@ -66,7 +66,7 @@ void __cdecl
 clrstr_print_rainbow(const char* text);
 
 
-#define DEFAULT_CLRTXT (clr_txt_t){WHITE, ""};
+#define DEFAULT_CLRTXT (clr_txt_t){WHITE, ""}
 #define MAKE_CLRTXT(clr, txt) (clr_txt_t){(clr), (txt)}
 
 #define SETCMDCLR(clr) SetConsoleTextAttribute(\
