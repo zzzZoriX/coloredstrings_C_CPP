@@ -2,6 +2,7 @@
 #define CLRSTR_H
 
 #include <stdio.h>
+#define CLRTXT_RAINBOW_MAGIC    3251
 
 #ifdef __cplusplus
 extern "C" {
@@ -24,6 +25,7 @@ typedef enum : color_n {
     PURPLE =    FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY,
     YELLOW =    FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY,
     WHITE =     FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE,
+    RAINBOW =   CLRTXT_RAINBOW_MAGIC
 } color;
 
 typedef struct {
@@ -46,9 +48,21 @@ clrstr_print_single(clr_txt_t clrtxto);
  *
  * @param clrtxtos  array of clr_txt_t structure objects
  * @param count     total count of objects in array
+ *
+ * @return nothing
  */
 void __cdecl
 clrstr_print(clr_txt_t* clrtxtos, size_t count);
+
+/**
+ * @brief prints a string as a rainbow
+ *
+ * @param text      string which will be printed as a rainbow
+ *
+ * @return nothing
+ */
+void __cdecl
+clrstr_print_rainbow(char* text);
 
 
 #define DEFAULT_CLRTXT (clr_txt_t){WHITE, ""};
