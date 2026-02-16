@@ -7,6 +7,15 @@ clrstr_print_single(clr_txt_t clrtxto) {
         return;
     }
 
+    if (clrtxto.clr == RAINBOW) {
+#ifdef CLRTXTRNBWIMPL
+        clrstr_print_rainbow(clrstr_print_rainbow(clrtxto.txt));
+#else
+        #warning "Define the CLRTXTRNBWIMPL macro"
+#endif
+        return;
+    }
+
     SETCMDCLR(clrtxto.clr);
     printf("%s", clrtxto.txt);
     SETCMDCLR(WHITE);
@@ -15,6 +24,14 @@ clrstr_print_single(clr_txt_t clrtxto) {
 void __cdecl
 clrstr_print(clr_txt_t* clrtxtos, size_t count) {
     for (size_t iterator = 0; iterator != count; ++iterator) {
+        if (clrtxtos[iterator].clr == RAINBOW) {
+#ifdef CLRTXTRNBWIMPL
+            clrstr_print_rainbow(clrstr_print_rainbow(clrtxto.txt));
+#else
+            #warning "Define the CLRTXTRNBWIMPL macro"
+#endif
+            continue;
+        }
         clrstr_print_single(clrtxtos[iterator]);
     }
 }
