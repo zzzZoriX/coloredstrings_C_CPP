@@ -63,7 +63,7 @@ clrstr_print(clr_txt_t* clrtxtos, size_t count);
  * @return nothing
  */
 void __cdecl
-clrstr_print_rainbow(char* text);
+clrstr_print_rainbow(const char* text);
 
 
 #define DEFAULT_CLRTXT (clr_txt_t){WHITE, ""};
